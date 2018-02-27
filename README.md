@@ -1,4 +1,4 @@
- 
+  ![alt text](https://github.com/mtuck/NIBRS/blob/master/cover.png?raw=true)
  
 ## Overview
 The following document will provide necessary information for a developer to understand the NIBRS database and the architecture used by Hexagon for NIBRS validation and the file creation process.  The document will describe the Federal NIBRS processes and then how the interface team needs to branch code and create data transfer scripts necessary for State Specific NIBRS implementations.  Both Federal NIBRS and State Specific NIBRS use the following 
