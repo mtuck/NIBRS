@@ -1,7 +1,12 @@
  
  
 ## Overview
-The following document will provide necessary information for a developer to understand the NIBRS database and the architecture used by Hexagon for NIBRS validation and the file creation process.  The document will describe the Federal NIBRS processes and then how the interface team needs to branch code and create data transfer scripts necessary for State Specific NIBRS implementations.  Both Federal NIBRS and State Specific NIBRS use the following (1) NIBRS Validation Web Service (2) NIBRS Data Transfer Service (3) NIBRS Transfer Scripts and (4) NIBRS Reporting Client.  These subjects will be discussed from both a Federal NIBRS and State Specific point of view
+The following document will provide necessary information for a developer to understand the NIBRS database and the architecture used by Hexagon for NIBRS validation and the file creation process.  The document will describe the Federal NIBRS processes and then how the interface team needs to branch code and create data transfer scripts necessary for State Specific NIBRS implementations.  Both Federal NIBRS and State Specific NIBRS use the following 
+
+1. NIBRS Validation Web Service 
+2. NIBRS Data Transfer Service 
+3. NIBRS Transfer Scripts and 
+4. NIBRS Reporting Client.  These subjects will be discussed from both a Federal NIBRS and State Specific point of view
 
 
 ## NIBRS and WebRMS
@@ -17,6 +22,7 @@ This will result in the incident either “Passing” NIBRS validation or the va
   
 
 ## Behind the scenes, here is what is happening:
+
 •	NIBRS Validate button is clicked in WebRMS
 •	Data transfer scripts that are in the NIBRS database (NIB_SQL_STAGING table) are ran to move relative incident information from WebRMS database into NIBRS database
 •	NIBRS Validation web service is called and either the Federal NIBRS or the State Specific NIBRS validation .dll file is ran against the data in the NIBRS database for the given incident
