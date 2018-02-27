@@ -34,7 +34,7 @@ The NIBRS Data Transfer Service should be installed on the WebRMS database serve
 
 The NIBRS Data Transfer Service transfers incident information to the NIBRS Database.  When transferring the data, the services uses abbreviated codes, to collect WebRMS data, called NIB codes.  NIB codes are a set of standardized codes. (E.X 40 = Personal Weapon) These codes are specified in the federal documentation, but they can vary by state. The NIBRS codes are stored in the WebRMS database in the MASTCODE table under the NIB_CODE column. The NIB codes can also be found in the NIBRS database in the NIB_CODES table. Sometimes our clients do not configure these codes correctly causing errors.  
 
-####ADMIN_REC
+#### ADMIN_REC
 When the Data Transfer Service transfers an incident, an admin record is created in the NIB_ADMIN table. The admin record holds some high-level information about the incident.  Most importantly it holds the ADMIN_REC of the incident.  The ADMIN_REC is how the incident will be referenced in the NIBRS database.  You can use the NIB_ADMIN table to find the ADMIN_REC for an INCIDENT_NUM.
 
 <INSERT CONFIG FILE VALUE HERE>
