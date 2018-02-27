@@ -34,6 +34,7 @@ The NIBRS Data Transfer Service should be installed on the WebRMS database serve
 
 The NIBRS Data Transfer Service transfers incident information to the NIBRS Database.  When transferring the data, the services uses abbreviated codes, to collect WebRMS data, called NIB codes.  NIB codes are a set of standardized codes. (E.X 40 = Personal Weapon) These codes are specified in the federal documentation, but they can vary by state. The NIBRS codes are stored in the WebRMS database in the MASTCODE table under the NIB_CODE column. The NIB codes can also be found in the NIBRS database in the NIB_CODES table. Sometimes our clients do not configure these codes correctly causing errors.  
 
+#### ADMIN_REC
 When the Data Transfer Service transfers an incident, an admin record is created in the NIB_ADMIN table. The admin record holds some high-level information about the incident.  Most importantly it holds the ADMIN_REC of the incident.  The ADMIN_REC is how the incident will be referenced in the NIBRS database.  You can use the NIB_ADMIN table to find the ADMIN_REC for an INCIDENT_NUM.
 
 <INSERT CONFIG FILE VALUE HERE>
@@ -43,7 +44,7 @@ The NIBRS Validation Web Service should be installed on the WebRMS application s
 <INSERT CONFIG FILE VALUES HERE>
 
 ## NIBRS Data Transfer Scripts
-The data transfer scripts reside in the NIBRS database in the NIB_SQL_STAGING table.  When the data transfer code is run it basically gets all the “Active” scripts where the state field value is “FD” or the state where the customer resides (i.e. Alexandria Virginia state specific scripts would have a “VA” in the state field).  Each script has an ordernum field value and the scripts are ordered by the ordernum field.  As the scripts are ran and depending on the configuration setup for logging, the exact scripts that are ran are put into the NIBRS.DEBUG_CLOB table.  These are very useful during debugging what error may have occurred or why data was transferred into the NIBRS database a certain way. 
+The data transfer scripts reside in the NIBRS database in the NIB_SQL_STAGING table.  When the data transfer code is run it basically gets all the “Active” scripts where the state field value is “FD” or the state where the customer resides (i.e. Alexandria Virginia state specific scripts would have a “VA” in the state field).  Each script has an ordernum field value and the scripts are ordered by the ordernum field.  As the scripts are ran and depending on the configuration setup for logging, the exact scripts that are ran are put into the NIBRS.DEBUG_CLOB table.  These are very useful during debugging what error may have occurred or why data was transferred into the NIBRS database a certain way. The SEQUENCE_ID will correspond to the [ADMIN_REC](ADMIN_REC)
 
 ## NIBRS Reporting Client
 The NIBRS Reporting Client can initially be installed on the WebRMS database server where the WebRMS and NIBRS databases are installed.  However, it can be installed on any machine (i.e. records personnel local machine) as long as it is configured correctly as for the database connection string and where the output files will be generated.  It would be preferred to have all the reporting client installs to point to a single share on the network so that all clients are outputting files to the same shared directory.
