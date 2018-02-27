@@ -21,7 +21,7 @@ While most agencies will use the NIBRS Reporting Client as a single place to val
 This will result in the incident either “Passing” NIBRS validation or the validation will return a series of Errors or Warnings about the incidents.  Incidents and can be submitted to the state with Warnings but not with Errors.  If errors are returned, the user must then take appropriate actions to fix the errors before then trying to validate the incident again.  This process must be repeated until all errors are cleared for the incident.  Below is a sample of what a validation that returns errors may look like
   
 
-## Behind the scenes, here is what is happening:
+#### Behind the scenes, here is what is happening:
 
 -	NIBRS Validate button is clicked in WebRMS
 -	Data transfer scripts that are in the NIBRS database (NIB_SQL_STAGING table) are ran to move relative incident information from WebRMS database into NIBRS database
