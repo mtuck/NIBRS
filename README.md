@@ -23,10 +23,10 @@ This will result in the incident either “Passing” NIBRS validation or the va
 
 ## Behind the scenes, here is what is happening:
 
-•	NIBRS Validate button is clicked in WebRMS
-•	Data transfer scripts that are in the NIBRS database (NIB_SQL_STAGING table) are ran to move relative incident information from WebRMS database into NIBRS database
-•	NIBRS Validation web service is called and either the Federal NIBRS or the State Specific NIBRS validation .dll file is ran against the data in the NIBRS database for the given incident
-•	NIBRS Validation returns status of Passed, Passed with Warnings or Errors
+-	NIBRS Validate button is clicked in WebRMS
+-	Data transfer scripts that are in the NIBRS database (NIB_SQL_STAGING table) are ran to move relative incident information from WebRMS database into NIBRS database
+-	NIBRS Validation web service is called and either the Federal NIBRS or the State Specific NIBRS validation .dll file is ran against the data in the NIBRS database for the given incident
+-	NIBRS Validation returns status of Passed, Passed with Warnings or Errors
 
 
 ## NIBRS Data Transfer Service
