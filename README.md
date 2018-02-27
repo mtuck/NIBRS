@@ -9,7 +9,9 @@ NIBRS is an acronym used in law enforcement to describe National Incident Based 
 Some states, have also decided that they want to keep their own crime stats and therefore have come up with their own “State Specific NIBRS” rules and reporting formats that they use.  For these states, law enforcement agencies will report the information the state and the state will then send the information on using the Federal NIBRS rules and formats.
 Because Hexagon has customers in many states, we need to support both the Federal NIBRS and State Specific NIBRS for those states that have their own.
 While most agencies will use the NIBRS Reporting Client as a single place to validate incidents and create their monthly output files, NIBRS Validation can be performed on individual incident records from with the WebRMS product by going into “Edit” mode on an incident in WebRMS and clicking the “NIBRS Validate” button at the top of the incident form.
-  
+ 
+ ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+ ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
 This will result in the incident either “Passing” NIBRS validation or the validation will return a series of Errors or Warnings about the incidents.  Incidents and can be submitted to the state with Warnings but not with Errors.  If errors are returned, the user must then take appropriate actions to fix the errors before then trying to validate the incident again.  This process must be repeated until all errors are cleared for the incident.  Below is a sample of what a validation that returns errors may look like
   
